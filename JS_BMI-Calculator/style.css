@@ -1,0 +1,282 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*,*:before,*:after{ 
+    box-sizing: border-box; 
+}
+
+body{
+    width: 1024px;
+    margin: 0 auto;
+}
+.header{
+    width: 1024px;
+    background: #424242;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0px;
+}
+.text{
+    margin-left: 120px;
+}
+
+.header p{
+    color: #ffd366;
+    width: 100px;
+}
+.logo{
+    width: 120px;
+    height: 120px;
+    margin-top: 20px;
+}
+.logo img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.height,.weight{
+    margin: 5px 0px 25px 0px;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid #ffd366;
+    background-color: #646464;
+    padding: 5px 0px;
+}
+::placeholder { /* CSS 3 標準 */
+  color: #b1b1b1;
+  text-indent:15px;
+}
+.content{
+    width: 1024px;
+    background: #f5f5f5;
+}
+.content h2{
+    text-align: center;
+    padding: 30px 0px 0px 0px;
+    font-size: 24px;
+}
+.listBMI{
+    padding: 0px 180px 30px 180px;
+
+}
+.listBMI a{
+    float: right;
+    margin-right: 15px;
+    text-decoration:none;
+    cursor: pointer;
+
+}
+.liTitle{
+    margin-left: 10px;
+}
+.math-1,.math-2,.math-3{
+    display: inline;
+    margin-left: 75px;
+}
+/* 調整輕度/中度/重度肥胖的數字間距 */
+.littlefat .math-1,.middlefat .math-1,.toofat .math-1{
+    margin-left: 30px;
+}
+.toofat .math-3{
+    margin-left: 65px;
+}
+.BMIStyle,.weightStyle,.heightStyle{
+    font-size: 12px;
+    color: #424242;
+    margin-right: 5px;
+}
+.footer{
+    width: 1024px;
+    height: 90px;
+    background: url(img/BMICLogoFooter.png) no-repeat center,#ffd366;
+}
+
+/* 原始BMI的按鈕 */
+.calculate{
+    border: solid #ffd366;
+    margin-left: 45px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #ffd366;
+    color: #424242;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    display: block;
+}
+.resultBMI{
+    border: 5px solid #31baf9;
+    color: #31baf9;
+    margin-left: 45px;
+    padding-top: 25px;
+    font-size: 14px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #424242;
+    float: right;
+    position: relative;
+    display: none;
+}
+.resultBMIStyle{
+    display: block;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.state{
+    position: absolute;
+    right: -70px;
+    top: 25px;
+    font-size: 26px;
+    font-weight: bold;
+}
+.state.littlefat,.state.middlefat,.state.toofat{
+    right: -120px;
+}
+/* 返回計算BMI的按鈕 */
+.resetBtn{
+    border: 4px solid #424242;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: url('img/icons_loop.png') #31baf9 no-repeat center center;
+    position: absolute;
+    cursor: pointer;
+    right: -10px;
+}
+
+/* 圓形BMI按鈕結果的各體態顏色色塊 */
+.resultBMI.thin{
+    border: 5px solid #31baf9;
+    color: #31baf9;
+}
+.resetBtn.thin{
+    border: 4px solid #424242;
+    background: url('img/icons_loop.png') #31baf9 no-repeat center center;
+}
+.resultBMI.middle{
+    border: 5px solid #86d73f;
+    color: #86d73f;
+}
+.resetBtn.middle{
+    border: 4px solid #424242;
+    background: url('img/icons_loop.png') #86d73f no-repeat center center;
+}
+.resultBMI.fat{
+    border: 5px solid #ff982d;
+    color: #ff982d;
+}
+.resetBtn.fat{
+    border: 4px solid #424242;
+    background: url('img/icons_loop.png') #ff982d no-repeat center center;
+}
+.resultBMI.littlefat{
+    border: 5px solid #ff6c03;
+    color: #ff6c03;
+}
+.resetBtn.littlefat{
+    border: 4px solid #424242;
+    background: url('img/icons_loop.png') #ff6c03 no-repeat center center;
+}
+.resultBMI.middlefat{
+    border: 5px solid #ff6c03;
+    color: #ff6c03;
+}
+.resetBtn.middlefat{
+    border: 4px solid #424242;
+    background: url('img/icons_loop.png') #ff6c03 no-repeat center center;
+}
+.resultBMI.toofat{
+    border: 5px solid #ff1200;
+    color: #ff1200;
+}
+.resetBtn.toofat{
+    border: 4px solid #424242;
+    background: url('img/icons_loop.png') #ff1200 no-repeat center center;
+}
+
+/* 長條圖各體態顏色色塊 */
+.listBMI .thin{
+    border-left: 5px #31baf9 solid;
+    background: white;
+    padding: 20px 0px;
+    margin: 35px 0px;
+}
+.listBMI .middle{
+    border-left: 5px #86d73f solid;
+    background: white;
+    padding: 20px 0px;
+    margin: 35px 0px;
+}
+.listBMI .fat{
+    border-left: 5px #ff982d solid;
+    background: white;
+    padding: 20px 0px;
+    margin: 35px 0px;
+}
+.listBMI .littlefat{
+    border-left: 5px #ff6c03 solid;
+    background: white;
+    padding: 20px 0px;
+    margin: 35px 0px;
+}
+.listBMI .middlefat{
+    border-left: 5px #ff6c03 solid;
+    background: white;
+    padding: 20px 0px;
+    margin: 35px 0px;
+}
+.listBMI .toofat{
+    border-left: 5px #ff1200 solid;
+    background: white;
+    padding: 20px 0px;
+    margin: 35px 0px;
+}
+
+/* 各BMI體態色碼 - 過輕:#31baf9 理想:#86d73f 過重:ff982d 輕度肥胖:ff6c03 中度肥胖:ff6c03 重度肥胖:#ff1200 背景顏色:#424242 */
