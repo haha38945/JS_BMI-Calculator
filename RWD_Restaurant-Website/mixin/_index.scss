@@ -1,0 +1,211 @@
+.hint{
+    background: $main-color;
+    padding-top: 3%;
+    h4{
+        text-align: center;
+        margin-top: 20px;
+        color: $text-color;
+    }
+    .container{
+        display: flex;
+        justify-content:space-around;
+        @include phone{
+            display: block;
+            border: 0.1px solid $main-color;
+        }
+        .information{
+            width:30%;
+            margin: 40px 0px;
+            @include phone{
+                width: 100%;
+            }
+            h3,p{
+                color: $text-color;
+                font-size: $font-small;
+            }
+            img{
+                margin-left: 15%;
+                border-radius: 50%;
+            }
+            @include ipad{
+                img{
+                    margin-left: 5%;
+                }
+            }
+            @include phone{
+                img{
+                    margin-left: 30%;
+                }
+            }
+            h3{
+                text-align: center;
+                margin: 15px 0px;
+                font-weight: bold;
+            }
+            p{
+                padding: 0px 8%;
+            }
+        }
+    }
+}
+
+.chef{
+    background: #3d1101;
+    display: flex;
+    @include phone{
+        display: block;
+    }
+    img{
+        padding: 0px 4%;
+    }
+    @include phone{
+        img{
+            padding: 0;
+            width: 100%;
+        }
+    }
+    .information{
+        padding-bottom: 7%;
+        .title{
+            padding: 10% 0px 5px 0px;
+        }
+        p{
+            color: #efe9e7;
+            padding-right: 18%;
+        }
+        @include ipad{
+            .text{
+                display: none;
+            }
+        }
+        @include phone{
+            p{
+                padding: 0 30px;
+            }
+            .title{
+                padding: 10% 0px 5px 30px;
+            }
+            .text{
+                display: block;
+            }
+        }
+    }
+}
+
+.reputation{
+    background: $main-color;
+    @include phone{
+        border: 0.1px solid $main-color;
+    }
+    h3{
+        text-align: center;
+        padding: 50px 0px 35px 0px;
+        font-weight: bold;
+    }
+    h3,h4,p{
+        color: $text-color;
+    }
+    .block{
+        display: flex;
+        justify-content: space-around;
+        padding: 0 3%;
+        @include phone{
+            display: block;
+        }
+        .container{
+            display: flex;
+            margin-bottom: 50px;
+            padding-left: 1%;
+            @include phone{
+                margin-bottom: 30px;
+            }
+            img{
+                border-radius: 50%;
+            }
+            .information{
+                padding-left: 4%;
+                h4{
+                    padding-top: 20px;
+                    font-size: $font-verysmall;
+                    font-weight: bold;
+                }
+                p{
+                    font-size: $font-small;
+                }
+                .nickname{
+                    float: right;
+                    color: #7c5e52;
+                    font-size: $font-verysmall;
+                }
+            }
+        }
+    }
+}
+
+.booking{
+    background: #f6f4f3;
+    color: $text-color;
+    h3{
+        text-align: center;
+        padding: 30px 0;
+    }
+    .container{
+        padding-bottom: 40px;
+        display:flex;
+        @include phone{
+            display: block;
+        }
+        .photo{
+            padding: 0 15px 0 25px;
+            img{
+                @include phone{
+                    width: 100%;
+                }
+            }
+        }
+        .form{
+            width: 200%;
+            @include ipad{
+                width: 80%;
+                padding-left: 10px;
+            }
+            .text{
+                width: 100%;
+                margin-top: 5px;
+                margin-bottom: 15px;
+            }
+            .vegetarianAsk{
+                margin-top: 15px;
+                margin-right: 50px;
+            }
+            .btn{
+                display: flex;
+                justify-content: flex-end;
+                padding-top: 20px;
+                .cancel,.send{
+                    color: #fff;
+                    border: none;
+                    border-radius: 10%;
+                    padding: 2px 15px;
+                    cursor: pointer;
+                }
+                .cancel{
+                    background: #a09e9e;
+                    margin-right: 20px;
+                }
+                .send{
+                    background: #f56c23;
+                }
+                .send:hover{
+                    background: #f58f23;
+                }
+            }
+            .send{
+                max-width: 70px;
+            }
+            label{
+                // border: 1px solid red;
+            }
+        }
+    }
+}
