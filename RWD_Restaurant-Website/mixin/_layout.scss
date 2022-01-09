@@ -13,7 +13,7 @@ $text-color: #3d1101;
 };
 
 @mixin phone{
-    @media (max-width: 414px){
+    @media screen and(max-width: 414px){
         @content
     }
 };
