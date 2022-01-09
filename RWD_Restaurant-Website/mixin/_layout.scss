@@ -1,0 +1,173 @@
+$font-big: 36px;
+$font-middle: 24px;
+$font-small: 18px;
+$font-verysmall: 16px;
+$header-color: #eee;
+$main-color: #efe9e7;
+$text-color: #3d1101;
+
+@mixin ipad{
+    @media (max-width: 768px){
+        @content
+    }
+};
+
+@mixin phone{
+    @media (max-width: 480px){
+        @content
+    }
+};
+
+body{
+    width: 1024px;
+    margin: auto auto;
+    @include ipad{
+        width: 768px;
+    }
+    @include phone{
+        width: 480px;
+    }
+}
+
+.header{
+    // width: 1024px;
+    // margin: auto auto;
+    height: 420px;
+    background: url("../img/header_desktop.png") no-repeat;
+    background-position: center;
+    @include ipad{
+        width: 768px;
+        background-position: center;
+    }
+    @include phone{
+        width: 480px;
+        background: url("../img/header_mobile.png") no-repeat;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        background: rgba(0,0,0,0.3); //設定背景透明，文字不透明
+        h1{
+            padding: 20px 30px;
+        }
+        h1 a{
+            background: url("../img/logo_w@svg.svg") no-repeat;
+            width:120px;
+            height:24px;
+            display: block;
+            text-indent: 101%;
+            overflow: hidden;
+            white-space: nowrap; //以上4行設定圖片取代文字，讓瀏覽器能讀到h1
+        }
+        ul{
+            display: flex;
+            a{
+                display: block;
+                text-decoration: none;
+                padding: 20px;
+                margin-right:20px;
+                color: $header-color;
+                transition: all 0.3s;
+                @include phone{
+                    padding: 22px;
+                    font-size: $font-verysmall;
+                }
+            }
+            a:hover{
+                background: #dd4501;
+            }
+        }
+    }
+    .slogan{
+        background: rgba(0,0,0,0.3); //設定背景透明，文字不透明
+        max-width:40%;
+        margin: auto auto;
+        margin-top:100px;
+        @include phone{
+            max-width: 70%;
+            margin-top: 50px;
+        }
+        h2{
+            font-size: $font-big;
+            padding: 20px 0px;
+        }
+        p{
+            font-size: $font-small;
+            padding-bottom: 20px;
+        }
+        h2,p{
+            color: $header-color;
+            text-align: center;
+        }
+    }
+}
+
+.footer{
+    // width: 1024px;
+    // margin: auto auto;
+    background: $main-color;
+    display: flex;
+    justify-content: space-between;
+    @include ipad{
+        width: 768px;
+    }
+    @include phone{
+        width: 480px;
+        display: block;
+    }
+    h2{
+        font-weight: bold;
+    }
+    .introduce{
+        width: 300px;
+        padding: 50px 0px 50px 15px;
+        @include phone{
+            width: 95%;
+            padding: 40px 0px 30px 20px;
+        }
+    }
+    .location{
+        padding: 50px 0px 50px 30px;
+        @include phone{
+            padding: 30px 0px 30px 25px;
+        }
+        ul{
+            list-style: disc;
+        }
+    }
+    .introduce,.location{
+        color: $text-color;
+    }
+    .introduce p,li{
+        font-size: $font-verysmall;
+    }
+    .link{
+        padding: 40px 0px ;
+        @include phone{
+            padding: 0px;
+        }
+        .logo{
+            float: right;
+            padding: 0 20px 10px 0;
+            @include ipad{
+                width:80%;
+            }
+            @include phone{
+                width:60%;
+                float: none;
+                padding-left: 180px;
+            }
+        }
+    }
+    .socialMedia{
+        padding-left: 80px;
+        @include phone{
+            padding-left: 380px;
+        }
+        img{
+            width: 40px;
+            height: 40px;
+            padding-bottom: 10px;
+        }
+    }
+}
