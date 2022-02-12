@@ -2,7 +2,7 @@
 六角學院-JavaScript-入門篇-學徒的試煉--Leaflet地圖應用  
 
 ## 網頁呈現
-https://haha38945.github.io/Side-Project/Leaflet API _ Find a Mask/  
+https://haha38945.github.io/Side-Project/Leaflet%20API%20_%20Find%20a%20Mask/
 
 **使用技術包括**
   * HTML/CSS
