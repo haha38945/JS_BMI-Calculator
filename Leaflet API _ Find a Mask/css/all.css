@@ -1,0 +1,252 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+}
+.container .mask {
+  display: flex;
+  flex-direction: column;
+}
+.container .mask .header, .container .mask .content-bk {
+  max-width: 414px;
+}
+.container .mask .header {
+  background: #89c1c6;
+  padding: 20px;
+}
+.container .mask .header .today {
+  margin-bottom: 3%;
+  color: #fff;
+}
+.container .mask .header .day {
+  color: #fff;
+  margin-left: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.container .mask .header .select {
+  margin-bottom: 10px;
+  text-indent: 7px;
+  color: #fff;
+  border-left: 5px solid #d08c89;
+}
+.container .mask .header .showNumber {
+  color: #fff;
+  font-size: 18px;
+  padding-top: 4.5%;
+}
+.container .mask .header .showNumber .storeNumber {
+  font-size: 27px;
+  font-weight: bold;
+  padding: 0 2%;
+  margin: 0 2%;
+  border: 1px solid #fff;
+}
+.container .mask .content-bk {
+  overflow-y: auto;
+  background: #f7f7f7;
+  padding: 2%;
+}
+.container .mask .content-bk .content {
+  background: #fff;
+  padding: 3%;
+  margin-bottom: 18px;
+  color: #4f4f4f;
+  font-size: 18px;
+  box-shadow: 2px 2px 6px gray;
+}
+.container .mask .content-bk .content a {
+  text-decoration: none;
+  color: #4f4f4f;
+}
+.container .mask .content-bk .content .numbrOfMask {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  color: #fff;
+}
+.container .mask .content-bk .content .numbrOfMask .adult, .container .mask .content-bk .content .numbrOfMask .child {
+  width: 200px;
+  padding: 4% 3%;
+  border-radius: 10px;
+  line-height: 16px;
+}
+.container .mask .content-bk .content .numbrOfMask .quantity {
+  font-size: 27px;
+  font-weight: bold;
+}
+.container .mask .content-bk .content .numbrOfMask .adult {
+  background: #90b5d8;
+  margin-right: 1%;
+}
+.container .mask .content-bk .content .numbrOfMask .child {
+  background: #d08c89;
+  margin-left: 1%;
+}
+.container .mask .content-bk .content .drugstore {
+  font-weight: bold;
+}
+.container .mask .content-bk .content .drugstore :hover {
+  color: #89c1c6;
+  cursor: pointer;
+}
+.container .mask .content-bk .content .detail p {
+  margin-top: 10px;
+}
+.container .mask .content-bk .content .detail .adress, .container .mask .content-bk .content .detail .note {
+  line-height: 22px;
+}
+.container .mask .content-bk .content .detail .noNote {
+  display: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+}
+.container #map {
+  width: 100%;
+}
+
+.marker-cluster-small {
+  background-color: rgba(181, 226, 140, 0.6);
+}
+
+.marker-cluster-small div {
+  background-color: rgba(110, 204, 57, 0.6);
+}
+
+.marker-cluster-medium {
+  background-color: rgba(241, 211, 87, 0.6);
+}
+
+.marker-cluster-medium div {
+  background-color: rgba(240, 194, 12, 0.6);
+}
+
+.marker-cluster-large {
+  background-color: rgba(253, 156, 115, 0.6);
+}
+
+.marker-cluster-large div {
+  background-color: rgba(241, 128, 23, 0.6);
+}
+
+.marker-cluster {
+  background-clip: padding-box;
+  border-radius: 20px;
+}
+
+.marker-cluster div {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  margin-top: 5px;
+  text-align: center;
+  border-radius: 15px;
+  font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.marker-cluster span {
+  line-height: 30px;
+}
+
+.leaflet-popup-content p {
+  margin: 0px !important;
+}
+
+.leaflet-popup-content .content {
+  color: #4f4f4f;
+  font-size: 18px;
+}
+.leaflet-popup-content .drugstore {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.leaflet-popup-content .adult, .leaflet-popup-content .child {
+  width: 200px;
+  padding: 4% 3%;
+  border-radius: 10px;
+  line-height: 16px;
+}
+.leaflet-popup-content .adult {
+  background: #90b5d8;
+  margin-right: 1%;
+}
+.leaflet-popup-content .numbrOfMask {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  color: #fff;
+}
+.leaflet-popup-content .child {
+  background: #d08c89;
+  margin-left: 1%;
+}
+.leaflet-popup-content .adress, .leaflet-popup-content .note {
+  line-height: 22px;
+}
+.leaflet-popup-content .quantity {
+  font-size: 27px;
+  font-weight: bold;
+}/*# sourceMappingURL=all.css.map */

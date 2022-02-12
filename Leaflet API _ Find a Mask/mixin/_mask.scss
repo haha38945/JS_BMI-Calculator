@@ -1,0 +1,111 @@
+$main-color: #89c1c6;
+$adult-color: #90b5d8;
+$child-color: #d08c89;
+$nomask-color: #b3b3b3;
+$text-color: #4f4f4f;
+$background-color: #f7f7f7;
+$text-big: 27px;
+$text-middle: 24px;
+$text-small: 18px;
+
+.container{
+    height: 100vh;
+    .mask{
+        display: flex;
+        flex-direction: column;
+        .header,.content-bk{
+            max-width: 414px;
+        }
+        .header{
+            background: $main-color;
+            padding: 20px;
+            .today{
+                margin-bottom: 3%;
+                color: #fff;
+            }
+            .day{
+                color: #fff;
+                margin-left: 5px;
+                font-size: $text-small;
+                font-weight: bold;
+            }
+            .select{
+                margin-bottom: 10px;
+                text-indent: 7px;
+                color: #fff;
+                border-left: 5px solid $child-color;
+            }
+            .showNumber{
+                color: #fff;
+                font-size: $text-small;
+                padding-top: 4.5%;
+                .storeNumber{
+                    font-size: $text-big;
+                    font-weight: bold;
+                    padding: 0 2%;
+                    margin: 0 2%;
+                    border: 1px solid #fff;
+                }
+            }
+        }
+        .content-bk{
+            overflow-y: auto;
+            background: $background-color;
+            padding: 2%;
+            .content{
+                background: #fff;
+                padding: 3%;
+                margin-bottom: 18px;
+                color: $text-color;
+                font-size: $text-small;
+                box-shadow: 2px 2px 6px gray;
+                a{
+                    text-decoration: none;
+                    color: $text-color;
+                }
+                .numbrOfMask{
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 10px 0;
+                    color: #fff;
+                    .adult,.child{
+                        width: 200px;
+                        padding: 4% 3%;
+                        border-radius: 10px;
+                        line-height: 16px;
+                    }
+                    .quantity{
+                        font-size: $text-big;
+                        font-weight: bold;
+                    }
+                    .adult{
+                        background: $adult-color;
+                        margin-right: 1%;
+                    }
+                    .child{
+                        background: $child-color;
+                        margin-left: 1%;
+                    }
+                }
+                .drugstore{
+                    font-weight: bold;
+                    :hover{
+                        color: $main-color;
+                        cursor: pointer;
+                    }
+                }
+                .detail{
+                    p{
+                        margin-top: 10px;
+                    }
+                    .adress,.note{
+                        line-height: 22px;
+                    }
+                    .noNote{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
